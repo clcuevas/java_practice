@@ -89,5 +89,21 @@ public class LinkedList {
 
     list.insertEnd(5);
     list.printList();
+
+    list.insertAfter(third, 99);
+    list.printList();
+
+    /*
+     * The end result should be similar to the below:
+     *
+     * [ 1 2 3 ]      <-- first Nodes added to the LinkedList
+     *
+     * [ 4 1 2 3 ]      <-- after adding Node 4 to the front of the list
+     *
+     * [ 4 1 2 3 5 ]    <-- after adding Node 5 to the end of the list
+     *
+     * [ 4 1 2 3 99 5 ]   <-- after adding Node 99 after Node 3 in the Linked List
+     *
+     */
   }
 }
