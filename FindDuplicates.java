@@ -24,12 +24,8 @@ public class FindDuplicates {
       }
 
       if (temp[i].equals(temp[nextElement])) {
-        if (prevElement != i) {
-          if (temp[i].equals(temp[prevElement])) {
-            continue;
-          } else {
-            output.add(temp[i]);
-          }
+        if (prevElement != i && !temp[i].equals(temp[prevElement])) {
+          output.add(temp[i]);
         }
       }
     }
