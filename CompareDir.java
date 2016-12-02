@@ -32,7 +32,11 @@ public class CompareDir {
     Boolean needsBackup = false;
 
     for (int i = 0; i < list1.length; i++) {
-      needsBackup = FileUtils.contentEquals(list1[i], list2[i]);
+      for (int j = 0; j < list2.length; j++) {
+        if (!FileUtils.contentEquals(list1[i], list2[j])) {
+          needsBackup = true;
+        }
+      }
     }
 
     return needsBackup;
